@@ -77,6 +77,11 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Karena di Bambangshop hanya ada satu tipe subscriber (sama semua), Bambangshop tidak perlu menggunakan interface/trait. Interface/trait hanya diperlukan jika ada beberapa tipe subscriber yang bisa dibedakan menurut behavior/traitnya.
+
+2. Jika id pada Product dan url pada Subscriber dianggap pasti unik, maka DashMap lebih baik untuk digunakan dibandingkan Vec. Dengan adanya id dan url yang unik, DashMap dapat menggunakannya sebagai key, sehingga bisa menjalankan lookup, insertion, dan deletion dengan lebih cepat dibandingkan Vec (kompleksitas rata O(1) dibandingkan O(n)). Vec juga bisa digunakan, tapi kalau id dan url unik, lebih efisien untuk menggunakan DataMap.
+
+3. DashMap digunakan daripada HashMap karena DashMap bersifat thread-safe, dimana dapat diakses dan dimodifikasi oleh banyak thread secara bersamaan tanpa menyebabkan data race. Singleton Pattern merupakan design pattern yang memastikan adanya hanya satu instance dari suatu class. Karena Singleton Pattern tidak membuat data SUBSCRIBERS lebih thread-safe (tetap bisa diakses dan dimodifikasi dengan cara dimana menyebabkan data race), DashMap tetap harus digunakan.
 
 #### Reflection Publisher-2
 
