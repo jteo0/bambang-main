@@ -69,7 +69,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement notify function in Notification service to notify each Subscriber.`
     -   [x] Commit: `Implement publish function in Program service and Program controller.`
     -   [x] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -91,3 +91,8 @@ This is the place for you to write reflections:
 3. Postman menolong saya untuk menguji coba program yang telah dibuat. Fitur yang menurut saya paling berguna adalah fitur untuk memasukkan request dan melihat isinya dan outputnya dengan mudah.
 
 #### Reflection Publisher-3
+1. Bambangshop menggunakan varian Push Model, dimana ketika melakukan create/delete/public Product, semua subscriber yang telah subscribe pada product_type itu akan menerima notifikasi.
+
+2. Keuntungan dari penerapan Pull Method pada Bambangshop adalah informasi subscriber tidak ter-expose ke publisher. Kekurangannya adalah Pull Model akan memakan banyak resource karena harus mengecek status publisher secara seterusan untuk adanya perubahan.
+
+3. Jika Bambangshop tidak menggunakan multi-threading dalam proses notifikasi, prosesnya akan berjalan dengan lebih lambat karena notifikasi akan dikirimkan kepada semua subscriber secara satu persatu.
