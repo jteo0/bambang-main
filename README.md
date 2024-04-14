@@ -56,14 +56,14 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement add function in Subscriber repository.`
     -   [x] Commit: `Implement list_all function in Subscriber repository.`
     -   [x] Commit: `Implement delete function in Subscriber repository.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [x] Commit: `Create Notification service struct skeleton.`
     -   [x] Commit: `Implement subscribe function in Notification service.`
     -   [x] Commit: `Implement subscribe function in Notification controller.`
     -   [x] Commit: `Implement unsubscribe function in Notification service.`
     -   [x] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [x] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [x] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -84,5 +84,10 @@ This is the place for you to write reflections:
 3. DashMap digunakan daripada HashMap karena DashMap bersifat thread-safe, dimana dapat diakses dan dimodifikasi oleh banyak thread secara bersamaan tanpa menyebabkan data race. Singleton Pattern merupakan design pattern yang memastikan adanya hanya satu instance dari suatu class. Karena Singleton Pattern tidak membuat data SUBSCRIBERS lebih thread-safe (tetap bisa diakses dan dimodifikasi dengan cara dimana menyebabkan data race), DashMap tetap harus digunakan.
 
 #### Reflection Publisher-2
+1. Menurut prinsip <i>Seperation of Concerns</i>, suatu program dibuat dengan cara setiap bagian memiliki satu functionalitas/<i>concern</i>. Ini diimplementasi karena meningkatkan modularity, mantainability, dan scalability program. Walaupun Model di MVC menangani data storage dan business logic, ini tidak mengukuti prinsip seperation of concerns. Daripada menggunakan Model seperti pada MVC, Service digunakan untuk menganani business logic dan Repository untuk menangani data storage. Model digunakan untuk mendefinisikan suatu class.
+
+2. Jika hanya menggunakan Model, ini berarti bahwa semua fungsionalitas yang ditaruh di Repository dan Service akan dimasukkan ke Model. Ini menyebabkan Model menjadi lebih kompleks dan sulit untuk dipelihara karena setiap functionalitas berada di satu tempat dan error di satu tempat bersifat susah untuk ditemukan dan bisa mengefek bagian yang besar.
+
+3. Postman menolong saya untuk menguji coba program yang telah dibuat. Fitur yang menurut saya paling berguna adalah fitur untuk memasukkan request dan melihat isinya dan outputnya dengan mudah.
 
 #### Reflection Publisher-3
